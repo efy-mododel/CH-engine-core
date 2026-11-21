@@ -166,7 +166,7 @@ export const HomePageMenu = ({
       ),
     },
     {
-      label: <Trans>About GDevelop</Trans>,
+      label: <Trans>About CH-ENGINE core</Trans>,
       id: 'about-gdevelop',
       onClick: onOpenAbout,
       getIcon: ({ color, fontSize }) => (

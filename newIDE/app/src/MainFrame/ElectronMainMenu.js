@@ -62,10 +62,10 @@ const isMainWindow = (windowTitle: string): boolean => {
   if (!windowTitle) return false;
   const lowercaseTitle = windowTitle.toLowerCase();
   return (
-    lowercaseTitle.startsWith('gdevelop') &&
-    lowercaseTitle !== 'gdevelop dialogue tree editor (yarn)' &&
-    lowercaseTitle !== 'gdevelop sound effects editor (jfxr)' &&
-    lowercaseTitle !== 'gdevelop image editor (piskel)'
+    lowercaseTitle.startsWith('ch-engine core') &&
+    !lowercaseTitle.startsWith('ch-engine core dialogue tree editor (yarn)') &&
+    !lowercaseTitle.startsWith('ch-engine core sound effects editor (jfxr)') &&
+    !lowercaseTitle.startsWith('ch-engine core image editor (piskel)')
   );
 };
 

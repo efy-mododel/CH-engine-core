@@ -92,7 +92,7 @@ onMessageFromParentEditor(
       }
     }
     setTitle(
-      'GDevelop Dialogue Tree Editor (Yarn) - ' + externalEditorInput.name
+      'CH-ENGINE core Dialogue Tree Editor (Yarn) - ' + externalEditorInput.name
     );
   }
 );

@@ -16,7 +16,7 @@ export default class LocalEventsFunctionsExtensionOpener {
       message: 'Choose extension files to import (.json file)',
       filters: [
         {
-          name: 'GDevelop 5 "events based" extension',
+          name: 'CH-ENGINE core "events based" extension',
           extensions: ['json'],
         },
       ],
@@ -37,7 +37,7 @@ export default class LocalEventsFunctionsExtensionOpener {
       message: 'Choose an asset pack files to import (.gdo file)',
       filters: [
         {
-          name: 'GDevelop 5 asset pack',
+          name: 'CH-ENGINE core asset pack',
           extensions: ['gdo'],
         },
       ],

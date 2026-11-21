@@ -1,0 +1,76 @@
+name: Build Android APK (CH-ENGINE core)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "newIDE/app/**"
+      - "newIDE/android-app/**"
+      - ".github/workflows/build-android-apk.yml"
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Install web IDE dependencies
+        working-directory: newIDE/app
+        run: npm install
+
+      - name: Build web IDE
+        working-directory: newIDE/app
+        env:
+          NODE_OPTIONS: "--max-old-space-size=6144"
+          CI: "false"
+        run: npm run build
+
+      - name: Install Android wrapper dependencies
+        working-directory: newIDE/android-app
+        run: npm install
+
+      - name: Sync Capacitor Android project
+        working-directory: newIDE/android-app
+        run: npx cap sync android
+
+      - name: Build Debug APK
+        working-directory: newIDE/android-app/android
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Prepare APK artifact
+        run: |
+          mkdir -p artifacts
+          cp newIDE/android-app/android/app/build/outputs/apk/debug/app-debug.apk artifacts/CH-ENGINE-core-debug.apk
+
+      - name: Upload CH-ENGINE core APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CH-ENGINE-core-apk
+          path: artifacts/CH-ENGINE-core-debug.apk
+          retention-days: 30

@@ -12,7 +12,7 @@ const serviceWorker =
   typeof navigator !== 'undefined' ? navigator.serviceWorker : undefined;
 
 export function isServiceWorkerSupported(): boolean {
-  return !!serviceWorker;
+  return !!serviceWorker && !isNativeMobileApp();
 }
 
 export function registerServiceWorker() {

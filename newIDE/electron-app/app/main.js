@@ -92,7 +92,7 @@ if (args['mcp'] || args['json']) {
   log.transports.stderr = stderrLogTransport;
 }
 
-log.info('GDevelop Electron app starting...');
+log.info('CH-ENGINE core Electron app starting...');
 
 // Logs made with electron-logs can be found
 // on Linux: ~/.config/<app name>/log.log
@@ -570,7 +570,7 @@ app.on('ready', async function() {
         iconPath: process.execPath,
         iconIndex: 0,
         title: 'New window',
-        description: 'Open a new GDevelop window',
+        description: 'Open a new CH-ENGINE core window',
       },
     ]);
   }

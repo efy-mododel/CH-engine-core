@@ -1,0 +1,13 @@
+{
+  "appId": "com.chengine.core",
+  "appName": "CH-ENGINE core",
+  "webDir": "../app/build",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

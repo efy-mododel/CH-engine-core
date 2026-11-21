@@ -306,7 +306,7 @@ export const generateOnChooseSaveProjectAsLocation = ({
   const browserWindow = remote.getCurrentWindow();
   const saveDialogOptions = {
     defaultPath: defaultPath || getLastUsedDialogDirectory(),
-    filters: [{ name: 'GDevelop 5 project', extensions: ['json'] }],
+    filters: [{ name: 'CH-ENGINE core project', extensions: ['json'] }],
   };
 
   if (!dialog) {
