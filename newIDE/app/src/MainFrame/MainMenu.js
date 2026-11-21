@@ -339,17 +339,17 @@ export const buildMainMenuDeclarativeTemplate = ({
         onClickOpenLink: 'https://goodies.gdevelop.io',
       },
       {
-        label: i18n._(t`Contribute to GDevelop`),
+        label: i18n._(t`Contribute to CH-ENGINE core`),
         onClickOpenLink: 'https://gdevelop.io/page/contribute',
       },
       {
-        label: i18n._(t`Create Extensions for GDevelop`),
+        label: i18n._(t`Create Extensions for CH-ENGINE core`),
         onClickOpenLink:
           'https://github.com/4ian/GDevelop/blob/master/newIDE/README-extensions.md',
       },
       { type: 'separator' },
       {
-        label: i18n._(t`Help translate GDevelop`),
+        label: i18n._(t`Help translate CH-ENGINE core`),
         onClickOpenLink: 'https://crowdin.com/project/gdevelop',
       },
       {
@@ -361,7 +361,7 @@ export const buildMainMenuDeclarativeTemplate = ({
         : [
             { type: 'separator' },
             {
-              label: i18n._(t`About GDevelop`),
+              label: i18n._(t`About CH-ENGINE core`),
               onClickSendEvent: 'main-menu-open-about',
             },
           ]),
@@ -386,10 +386,10 @@ export const buildMainMenuDeclarativeTemplate = ({
   // macOS has a menu with the name of the app.
   if (isMacLike() && isApplicationTopLevelMenu) {
     template.unshift({
-      label: i18n._(t`GDevelop 5`),
+      label: i18n._(t`CH-ENGINE core`),
       submenu: [
         {
-          label: i18n._(t`About GDevelop`),
+          label: i18n._(t`About CH-ENGINE core`),
           onClickSendEvent: 'main-menu-open-about',
         },
         { type: 'separator' },

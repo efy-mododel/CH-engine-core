@@ -3,7 +3,7 @@
  * @see https://www.electron.build/configuration/configuration
  */
 const config = {
-  appId: 'com.gdevelop-app.ide',
+  appId: 'com.chengine.core',
   directories: {
     app: 'app',
     buildResources: 'build',
@@ -50,7 +50,7 @@ const config = {
       'Contents/Resources/app.asar.unpacked/node_modules/steamworks.js/dist/osx/steamworksjs.darwin-*.node',
   },
   win: {
-    executableName: 'GDevelop',
+    executableName: 'CH-ENGINE core',
     target: [
       { target: 'nsis', arch: ['x64'] },
       { target: 'zip', arch: ['x64'] },
@@ -61,10 +61,10 @@ const config = {
     allowToChangeInstallationDirectory: true,
   },
   appx: {
-    publisherDisplayName: 'GDevelop game engine',
-    displayName: 'GDevelop',
+    publisherDisplayName: 'CH-ENGINE core',
+    displayName: 'CH-ENGINE core',
     publisher: 'CN=B13CB8D3-97AA-422C-A394-0EE51B9ACAD3',
-    identityName: 'GDevelopgameengine.GDevelop',
+    identityName: 'CHEngineCore.CHEngineCore',
     backgroundColor: '#524F9C',
     languages: [
       'EN-US',

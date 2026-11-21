@@ -284,11 +284,11 @@ const AboutDialog = ({ onClose, updateStatus }: Props) => {
 
   return (
     <Dialog
-      title={<Trans>About GDevelop</Trans>}
+      title={<Trans>About CH-ENGINE core</Trans>}
       actions={[
         <FlatButton
           key="website"
-          label={<Trans>GDevelop Website</Trans>}
+          label={<Trans>CH-ENGINE core Website</Trans>}
           primary={false}
           onClick={() => Window.openExternalURL('https://gdevelop.io')}
         />,
@@ -316,12 +316,16 @@ const AboutDialog = ({ onClose, updateStatus }: Props) => {
       maxWidth="sm"
       fixedContent={
         <ColumnStackLayout noMargin>
-          <img src="res/GD-logo.png" alt="GDevelop logo" style={styles.logo} />
+          <img
+            src="res/GD-logo.png"
+            alt="CH-ENGINE core logo"
+            style={styles.logo}
+          />
           <Tabs
             value={currentTab}
             onChange={setCurrentTab}
             options={[
-              { value: 'about', label: <Trans>About GDevelop</Trans> },
+              { value: 'about', label: <Trans>About CH-ENGINE core</Trans> },
               { value: 'changelog', label: <Trans>What's new?</Trans> },
               { value: 'contributors', label: <Trans>Contributors</Trans> },
             ]}
@@ -335,16 +339,16 @@ const AboutDialog = ({ onClose, updateStatus }: Props) => {
             <ColumnStackLayout>
               <Text>
                 <Trans>
-                  GDevelop is a full-featured, open-source game engine. Build
-                  and publish games for any mobile, desktop or web game store.
-                  It's super fast, easy to learn and powered by a community
-                  making it better every day.
+                  CH-ENGINE core is a full-featured, open-source game engine.
+                  Build and publish games for any mobile, desktop or web game
+                  store. It's super fast, easy to learn and powered by a
+                  community making it better every day.
                 </Trans>
               </Text>
               <Text allowSelection>
-                <Trans>This version of GDevelop is:</Trans> {getIDEVersion()}{' '}
-                (editor full version: {getIDEVersionWithHash()}, core version:{' '}
-                {getGDCoreVersion()})
+                <Trans>This version of CH-ENGINE core is:</Trans>{' '}
+                {getIDEVersion()} (editor full version: {getIDEVersionWithHash()}
+                , core version: {getGDCoreVersion()})
               </Text>
               <Text size="sub-title">
                 <Trans>Updates</Trans>

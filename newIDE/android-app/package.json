@@ -1,0 +1,23 @@
+{
+  "name": "ch-engine-core-android",
+  "version": "1.0.0",
+  "description": "CH-ENGINE core Android APK wrapper (Capacitor)",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build:web": "cd ../app && npm run build",
+    "cap:sync": "cap sync android",
+    "cap:copy": "cap copy android",
+    "cap:open": "cap open android",
+    "build:apk:debug": "cd android && ./gradlew assembleDebug",
+    "build:apk:release": "cd android && ./gradlew assembleRelease",
+    "build:apk": "npm run build:web && npm run cap:sync && npm run build:apk:debug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}

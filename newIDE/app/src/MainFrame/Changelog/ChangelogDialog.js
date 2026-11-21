@@ -36,7 +36,7 @@ const ChangelogDialog = ({ open, onClose }: Props): null | React.Node => {
 
   return (
     <Dialog
-      title={<Trans>What's new in GDevelop?</Trans>}
+      title={<Trans>What's new in CH-ENGINE core?</Trans>}
       // $FlowFixMe[incompatible-type]
       actions={actions}
       open={open}
@@ -46,7 +46,7 @@ const ChangelogDialog = ({ open, onClose }: Props): null | React.Node => {
       <ResponsiveLineStackLayout noMargin justifyContent="space-between">
         <Text>
           <Trans>
-            GDevelop was upgraded to a new version! Check out the changes.
+            CH-ENGINE core was upgraded to a new version! Check out the changes.
           </Trans>
         </Text>
         <FlatButton

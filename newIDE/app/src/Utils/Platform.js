@@ -42,9 +42,38 @@ export const getPlatformName = (): string => {
         'Unknown platform (web-app)';
 };
 
+const getCapacitor = (): ?any => {
+  if (typeof window === 'undefined') return null;
+  // $FlowFixMe[prop-missing] - Capacitor is injected by the native shell at runtime.
+  return window.Capacitor || null;
+};
+
 export const isWindows = (): boolean => _isWindows;
 export const isMacLike = (): boolean => _isMacLike;
 export const isMobile = (): boolean => _isMobile;
-export const isNativeMobileApp = (): boolean => false;
-export const isNativeIos = (): boolean => false;
-export const isNativeAndroid = (): boolean => false;
+export const isNativeMobileApp = (): boolean => {
+  const capacitor = getCapacitor();
+  return !!(
+    capacitor &&
+    typeof capacitor.isNativePlatform === 'function' &&
+    capacitor.isNativePlatform()
+  );
+};
+export const isNativeIos = (): boolean => {
+  const capacitor = getCapacitor();
+  return !!(
+    isNativeMobileApp() &&
+    capacitor &&
+    typeof capacitor.getPlatform === 'function' &&
+    capacitor.getPlatform() === 'ios'
+  );
+};
+export const isNativeAndroid = (): boolean => {
+  const capacitor = getCapacitor();
+  return !!(
+    isNativeMobileApp() &&
+    capacitor &&
+    typeof capacitor.getPlatform === 'function' &&
+    capacitor.getPlatform() === 'android'
+  );
+};

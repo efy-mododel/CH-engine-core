@@ -198,7 +198,7 @@ const CreateAccountDialog = ({
           >
             <GDevelopGLogo fontSize="large" />
             <Text size="section-title" align="center" noMargin>
-              <Trans>Welcome to GDevelop!</Trans>
+              <Trans>Welcome to CH-ENGINE core!</Trans>
             </Text>
           </ColumnStackLayout>
         }

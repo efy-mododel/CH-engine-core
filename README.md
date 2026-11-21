@@ -1,6 +1,12 @@
-![GDevelop logo](https://raw.githubusercontent.com/4ian/GDevelop/master/newIDE/GDevelop%20banner.png "GDevelop logo")
+# CH-ENGINE core
 
-GDevelop is a **full-featured, no-code, open-source** game development software. You can build **2D, 3D and multiplayer games** for mobile (iOS, Android), desktop and the web. GDevelop is designed to be fast and incredibly intuitive: make games using an easy-to-understand yet powerful event-based system and modular behaviors. Create with AI that assists or builds alongside you.
+![CH-ENGINE core logo](https://raw.githubusercontent.com/4ian/GDevelop/master/newIDE/GDevelop%20banner.png "CH-ENGINE core logo")
+
+**CH-ENGINE core** is a **full-featured, no-code, open-source** game development software (based on GDevelop). You can build **2D, 3D and multiplayer games** for mobile (iOS, Android), desktop and the web. CH-ENGINE core is designed to be fast and incredibly intuitive: make games using an easy-to-understand yet powerful event-based system and modular behaviors. Create with AI that assists or builds alongside you.
+
+## Building Android APK
+
+See [`newIDE/android-app/README.md`](newIDE/android-app/README.md) for local and GitHub Actions APK build instructions.
 
 ![The GDevelop editor when editing a game level](https://raw.githubusercontent.com/4ian/GDevelop/master/newIDE/GDevelop%20screenshot.png "The GDevelop editor when editing a 3D game level")
 
